@@ -15,6 +15,27 @@ Eg:
 
 DBCC SHRINKFILE(EightSquare_log,10);
 
+Alternative Ways
+
+1. Right Click on Database 
+2. Go to Properties 
+3. Go to Options 
+4. Change the Recovery mode : from Full to Simple
+5. Click OK 
+
+6. Go Right Click on Database 
+7. Go to Task --> Shrink --> Files
+8. Change the File type: to Log 
+9. Click OK
+-- The Log file will be shrink with in a second.
+-- Now should change the Simple Recovery mode to Full Recovery mode
+10. Right Click on Database 
+11. Go to Properties 
+12. Go to Options 
+13. Change the Recovery mode : from Simple to Full
+14. Click OK 
+
+
 
 ---------------************ Change Column Name **********---------------------
 
