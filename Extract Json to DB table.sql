@@ -7,14 +7,15 @@ N'[
 SELECT *  
 FROM OPENJSON(@json)  
   WITH ([Id] int '$.Id',
-			 [Time] DATETIME '$.Date',
-		   [Title] nvarchar(500) '$.Title',
-			 [ApprovalCode] nvarchar(50) '$.ApprovalCode',
-			 [Amount] DECIMAL(32,2) '$.Amount',
-			 [IsCashOut] bit '$.IsCashOut',
-			 [IsCashIn]  bit '$.IsCashIn',
-			 [ReferenceNo] varchar(50) '$.ReferenceNo',
-			 [CurrencyName] varchar(50) '$.CurrencyName',
-			 [TransactionMessage] varchar(500) '$.TransactionMessage',
-			 [IsMultiCurrency] bit '$.IsMultiCurrency',
-			 [ServiceId] int '$.ServiceId')
+	[Time] DATETIME '$.Date',
+        [Title] nvarchar(500) '$.Title',
+	[ApprovalCode] nvarchar(50) '$.ApprovalCode',
+	[Amount] DECIMAL(32,2) '$.Amount',
+	[IsCashOut] bit '$.IsCashOut',
+	[IsCashIn]  bit '$.IsCashIn',
+	[ReferenceNo] varchar(50) '$.ReferenceNo',
+	[CurrencyName] varchar(50) '$.CurrencyName',
+	[TransactionMessage] varchar(500) '$.TransactionMessage',
+	[IsMultiCurrency] bit '$.IsMultiCurrency',
+	[ServiceId] int '$.ServiceId')
+	
