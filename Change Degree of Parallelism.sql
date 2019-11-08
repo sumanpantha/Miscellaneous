@@ -1,0 +1,17 @@
+USE [<DATABASE NAME>]
+
+EXEC sys.sp_configure N'max degree of parallelism', N'1'
+GO
+RECONFIGURE WITH OVERRIDE
+GO
+
+
+USE [master]
+GO
+
+GO
+USE [<DATABASE NAME>]
+GO
+ALTER DATABASE SCOPED CONFIGURATION SET MAXDOP = 1;
+GO
+
