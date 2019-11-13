@@ -28,6 +28,37 @@ WITH
   select * from Orders
   
   
+  -----EG:
+  
+  CREATE TABLE [dbo].[ServerLog](
+	[date] [varchar](50) NULL,
+	[time] [varchar](50) NULL,
+	[s-ip] [nvarchar](1000) NULL,
+	[cs-method] [nvarchar](1000) NULL,
+	[cs-uri-stem] [nvarchar](1000) NULL,
+	[cs-uri-query] [nvarchar](1000) NULL,
+	[s-port] [nvarchar](1000) NULL,
+	[cs-username] [nvarchar](1000) NULL,
+	[c-ip] [nvarchar](1000) NULL,
+	[cs(User-Agent)] [nvarchar](1000) NULL,
+	[cs(Referer)] [nvarchar](1000) NULL,
+	[sc-status] [nvarchar](1000) NULL,
+	[sc-substatus] [nvarchar](1000) NULL,
+	[sc-win32-status] [nvarchar](1000) NULL,
+	[time-taken] [nvarchar](200) NULL
+) ON [PRIMARY]
+GO
+
+
+BULK INSERT ServerLog
+FROM 'E:\MMP\Log\AppServer\u_ex191106_46.txt'
+WITH 
+  (    
+    FIELDTERMINATOR = ' ',	
+	FIRSTROW = 2
+  );
+  
+  
   
   
   
