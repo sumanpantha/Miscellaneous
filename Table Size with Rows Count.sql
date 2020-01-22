@@ -12,4 +12,4 @@ INNER JOIN sys.partitions p ON i.object_id = p.OBJECT_ID AND i.index_id = p.inde
 INNER JOIN sys.allocation_units a ON p.partition_id = a.container_id
 INNER JOIN sys.schemas s ON t.schema_id = s.schema_id
 GROUP BY t.Name, s.Name, p.Rows
-ORDER BY 1 desc
+ORDER BY RowCounts DESC
