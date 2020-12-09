@@ -93,4 +93,7 @@ SELECT top 1 BranchId = STUFF((
             ), 1, 1, '')
 FROM Agent
 
-
+--append time on CMD ping
+@echo off
+    ping -t 10.0.24.138|find /v ""|cmd /q /v:on /c "for /l %a in (0) do (set "data="&set /p "data="&if defined data echo(!time! !data!)" >E:\8Square\Ping10.0.24.138.txt
+    
