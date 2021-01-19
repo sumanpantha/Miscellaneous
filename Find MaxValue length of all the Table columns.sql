@@ -2,7 +2,7 @@
 -- So that we can restrict to appropriate length size of the datatype.
 
 SELECT 
-	'select ''['+TABLE_NAME+'.'+COLUMN_NAME  +']'' as [TableAndColName] , Max(len(['+COLUMN_NAME+'])) AS ColMaxDataLength'+ ' FROM ['+TABLE_NAME+'] UNION ALL'  
+	'SELECT ''['+TABLE_NAME+']'' AS [TableName],''['+COLUMN_NAME  +']'' AS [ColumnName] , Max(len(['+COLUMN_NAME+'])) AS ColMaxDataLength'+ ' FROM ['+TABLE_NAME+'] UNION ALL'  
 FROM INFORMATION_SCHEMA.COLUMNS WHERE 
-DATA_TYPE = 'nvarchar' and CHARACTER_MAXIMUM_LENGTH = -1
+DATA_TYPE = 'NVARCHAR' and CHARACTER_MAXIMUM_LENGTH = -1
 ORDER BY TABLE_NAME
